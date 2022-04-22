@@ -13,7 +13,7 @@ function devolverUltimoElemento(array) {
   // Devuelve el último elemento de un array
   // Tu código:
 
-  return array[-1];
+  return array[array.length - 1];
 
 }
 
@@ -33,7 +33,7 @@ function incrementarPorUno(array) {
   // y devuelve el array
   // Tu código:
 
-  for(let i = 0 ; i <= array.length ; i++){
+  for(var i = 0 ; i < array.length ; i++){
 
      array[i]++;
 
@@ -85,11 +85,11 @@ function arrayContiene(array, elemento) {
   // Devuelve "true" si está, o "false" si no está
   // Tu código:
 
-  for(let i = 0 ; i <= array.length ; i++){
+  for(var i = 0 ; i < array.length ; i++){
 
-    if (array[i] === elemento);{
+    if (array[i] === elemento){
 
-      return true
+      return true;
 
     }
 
@@ -107,7 +107,7 @@ function agregarNumeros(numeros) {
 
   var suma = 0
 
-  for (let i = 0 ; i <= numeros.length ; i++){
+  for (var i = 0 ; i < numeros.length ; i++){
 
     suma = numeros[i] + suma;
 
@@ -126,7 +126,7 @@ function promedioResultadosTest(resultadosTest) {
   var suma = 0
   var prom = 0
 
-  for (let i = 0 ; i <= resultadosTest.length ; i++){
+  for (var i = 0 ; i < resultadosTest.length ; i++){
 
     suma = resultadosTest[i] + suma;
 
@@ -145,9 +145,9 @@ function numeroMasGrande(numeros) {
   // Devuelve el número más grande
   // Tu código:
 
-  var nmg
+  var nmg = 0
 
-  for (let i = 0 ; i <= numeros.length ; i++){
+  for (var i = 0 ; i < numeros.length ; i++){
 
     if( numeros[i] > nmg ){
 
@@ -167,15 +167,15 @@ function multiplicarArgumentos() {
   // Si no se pasan argumentos devuelve 0. Si se pasa un argumento, simplemente devuélvelo
   // Escribe tu código aquí:
 
-  if (arguments < 1 ){
+  var producto = 1
 
-    return 0
+  if (arguments.length < 1 ){
+
+    return 0;
 
   }
 
-  var producto = 1
-  
-  for (let i = 0 ; i <= arguments.length ; i++){
+  for (var i = 0 ; i < arguments.length ; i++){
 
     
     producto = producto * arguments[i];
@@ -193,7 +193,7 @@ function cuentoElementos(arreglo){
 
   var elementos = 0
 
-  for (let i = 0 ; i <= arreglo.length ; i++){
+  for (var i = 0 ; i < arreglo.length ; i++){
 
     if(arreglo[i] > 18){
 
@@ -230,7 +230,7 @@ function empiezaConNueve(n) {
   //inicia con 9 y false en otro caso.
   //Escribe tu código aquí
 
-  let num = n.toString()
+  var num = n.toString()
   
   if(num.charAt(0) === '9'){
     
@@ -248,7 +248,7 @@ function todosIguales(arreglo) {
   //retornar true, caso contrario retornar false.
   //Escribe tu código aquí  
 
-  for (var i =0 ; i <= arreglo.length - 1; i++) {
+  for (var i =0 ; i < arreglo.length - 1; i++) {
 
     if(arreglo[i] !== arreglo[i+1]){
 
@@ -271,7 +271,7 @@ function mesesDelAño(array) {
 
   var nuevoArray = [];
 
-  for(let i= 0; i<array.length; i++) {
+  for(var i= 0; i<array.length; i++) {
 
     if(array[i] === "Enero" || array[i] === "Marzo" || array[i] === "Noviembre") {
 
@@ -303,7 +303,7 @@ function mayorACien(array) {
 
   var nuevoArray = [];
 
-  for(let i= 0; i <= array.length; i++) {
+  for(var i= 0; i < array.length; i++) {
 
     if(array[i] > 100) {
 
@@ -331,7 +331,7 @@ function breakStatement(numero) {
 
   var suma = numero;
 
-  for(var i = 0 ; i <= 10 ; i++) {
+  for(var i = 0 ; i < 10 ; i++) {
 
     suma = suma + 2;
 
